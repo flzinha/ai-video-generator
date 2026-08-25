@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080808;
+  color: #ffffff;
+}
+
+.container {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.logo span {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.header p {
+  color: #999999;
+  font-size: 16px;
+}
+
+.generator {
+  background: #111111;
+  border: 1px solid #292929;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  min-height: 170px;
+  resize: vertical;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #333333;
+  background: #080808;
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #8b5cf6;
+}
+
+textarea::placeholder {
+  color: #666666;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background: #080808;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.status {
+  min-height: 24px;
+  margin-top: 18px;
+  text-align: center;
+  color: #aaaaaa;
+}
+
+.preview {
+  min-height: 320px;
+  margin-top: 25px;
+  border-radius: 16px;
+  border: 1px dashed #333333;
+  background: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preview-placeholder {
+  text-align: center;
+  color: #666666;
+}
+
+.preview-placeholder span {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 30px 0;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .generator {
+    padding: 18px;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}
